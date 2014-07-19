@@ -332,6 +332,11 @@ h1, h2, h3, h4, h5, h6 {
 	height: 450px;
 	position: relative;
 }
+
+.nextArrow {
+	font-size: 40px;
+}
+
 .about {
 	background-image: url(../img/about-sep.jpg);
 }
@@ -339,25 +344,23 @@ h1, h2, h3, h4, h5, h6 {
 /* Portfolio Wrap Section */
 #portfoliowrap {
 	display: block;
-	margin-top: 80px;
 	margin-bottom: 80px;
 }
 
 #portfoliowrap h1 {
 	font-weight: 300;
+	font-size: 60px;
 	text-align: center;
-	margin-bottom: 50px;
-}
-.mt {
-	margin-top: 50px;
 }
 
-.mb {
-	margin-bottom: 60px;
-}
 
 #portfoliowrap i {
 	font-size: 50px;
+}
+
+#portfoliowrap img {
+	height: 50px;
+	width:auto;
 }
 
 .proc {
