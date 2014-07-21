@@ -288,8 +288,34 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 2px 2px 2px #000;
 }
 
+.stamp {
+	top:100px;
+	z-index: 2;
+	-webkit-transform: rotate(25deg); /* Safari */
+    -moz-transform: rotate(25deg); /* Firefox */
+    -ms-transform: rotate(25deg); /* IE */
+    -o-transform: rotate(25deg); /* Opera */
+    transform: rotate(25deg);
+	-webkit-transition: all 1s ease-in-out;
+	   -moz-transition: all 1s ease-in-out;
+		-ms-transition: all 1s ease-in-out;
+		 -o-transition: all 1s ease-in-out;
+			transition: all 1s ease-in-out;
+    width: 150px;
+    height: 150px;
+}
+
+.stamp:hover {
+	-webkit-transform: rotate(325deg); /* Safari */
+    -moz-transform: rotate(325deg); /* Firefox */
+    -ms-transform: rotate(325deg); /* IE */
+    -o-transform: rotate(325deg); /* Opera */
+    transform: rotate(325deg);
+}
+
 #headerwrap h2 {
 	color:#aaa;
+	z-index: 1;
 	margin-top: 40px;
 	padding-bottom: 30px;
 	letter-spacing: 4px;
