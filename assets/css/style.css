@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu h1.logo a:hover {
-	color: #f85c37;
+	font-style: normal;
 }
 
 .menu img.logo {
@@ -141,7 +141,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu a {
-	margin-left: 20px;
+	padding-left: 20px;
+	margin-left: 0px;
 	color: #808080;
 	display: block;
 	font-size: 12px;
@@ -149,10 +150,18 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 40px;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
 }
 
 .menu a:hover {
 	color: #ffffff;
+	text-decoration: none;
+	background-color: #111;
+	padding-left: 25px;
 }
 
 .menu a:active {
@@ -291,11 +300,6 @@ h1, h2, h3, h4, h5, h6 {
 .stamp {
 	top:100px;
 	z-index: 2;
-	-webkit-transform: rotate(25deg); /* Safari */
-    -moz-transform: rotate(25deg); /* Firefox */
-    -ms-transform: rotate(25deg); /* IE */
-    -o-transform: rotate(25deg); /* Opera */
-    transform: rotate(25deg);
 	-webkit-transition: all 1s ease-in-out;
 	   -moz-transition: all 1s ease-in-out;
 		-ms-transition: all 1s ease-in-out;
@@ -306,11 +310,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stamp:hover {
-	-webkit-transform: rotate(325deg); /* Safari */
-    -moz-transform: rotate(325deg); /* Firefox */
-    -ms-transform: rotate(325deg); /* IE */
-    -o-transform: rotate(325deg); /* Opera */
-    transform: rotate(325deg);
+	-webkit-transform: rotate(360deg); /* Safari */
+    -moz-transform: rotate(360deg); /* Firefox */
+    -ms-transform: rotate(360deg); /* IE */
+    -o-transform: rotate(360deg); /* Opera */
+    transform: rotate(360deg);
 }
 
 #headerwrap h2 {
