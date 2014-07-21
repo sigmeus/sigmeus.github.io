@@ -1,4 +1,4 @@
-;(function(){
+(function(){
 
 			// Menu settings
 			$('#menuToggle, .menu-close').on('click', function(){

@@ -31,12 +31,15 @@
 		<div class="menu-wrap">
 			<h1 class="logo"><a href="index.html#home">Sig.Meus</a></h1>
 			<i class="fa fa-times menu-close"></i>
-			<a href="#home" class="smoothScroll">Accueil</a>
-			<a href="#services" class="smoothScroll">Services</a>
-			<a href="#portfolio" class="smoothScroll">Portfolio</a>
-			<a href="#contact" class="smoothScroll">Contact</a>
+			<ul>
+			<li><a href="#home" class="smoothScroll">Accueil</a></li>
+			<li><a href="#services" class="smoothScroll">Services</a></li>
+			<li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
+			<li><a href="#contact" class="smoothScroll">Contact</a></li>
+			</ul>
 			<a target="_blank" href="http://github.com/sigmeus"><i class="fa fa-github"></i></a>
 			<a href="mailto:fx.thoorens@gmail.com"><i class="fa fa-envelope"></i></a>
+			
 		</div>
 		
 		<!-- Menu button -->
@@ -158,7 +161,7 @@
 	                    <div class="project">
 	                    	<img class="col-lg-6 img-responsive" src="assets/img/igr.png" alt="IGR">
 	                       	<h2>Outil complet de gestion des essais cliniques sur le Cancer</h2>
-	                       	Pour l'Institut Gustave Roussy (Villejuif, France), outil innovant sur la gestion des données spécifiques aux équipes de recherche clinique. Evaluation des effets secondaires, mesure de l'efficacité des chiéiothérapies en stade de recherche, suivi de facturation des interventions, mesure de l'efficaité des équipes.
+	                       	Pour l'Institut Gustave Roussy (Villejuif, France), outil innovant sur la gestion des données spécifiques aux équipes de recherche clinique. Evaluation et suivi des effets secondaires, mesure de l'efficacité des chimiothérapies en stade de recherche, validations de données, optimisation de l'utlisation des chambres et des salles de traitement.
 	                    </div>
 	                </div>
 				</div><!-- col-lg-4 -->
@@ -194,7 +197,7 @@
 						France
 					</p>
 					<p>
-						Tel. +333.84.24.18.80<br/>
+						Tel. +336.42.08.52.25<br/>
 						fx.thoorens@gmail.com<br/>
 					</p>
 
@@ -223,18 +226,25 @@
 	<script src="assets/js/main.js"></script>
 		<script>
 		$(function(){
-			if($(window).width()>512){
+			if($(window).width()>767){
 				$.stellar({
 					horizontalScrolling: false,
 					verticalOffset: 40
 				});
+				var boxes = $('.well');
+				var maxHeight = Math.max.apply(
+				  Math, boxes.map(function() {
+				    return $(this).height();
+				}).get());
+				boxes.height(maxHeight);
 			}
-			var boxes = $('.well');
-			var maxHeight = Math.max.apply(
-			  Math, boxes.map(function() {
-			    return $(this).height();
-			}).get());
-			boxes.height(maxHeight);
+			$(".menu a").click(function(){
+				$(".menu-open").toggleClass("menu-open");
+				$('#menuToggle').toggleClass('active');
+				$('body').toggleClass('body-push-toleft');
+			});
+			$('body').scrollspy({ target: '.menu-wrap' })
+			
 		});
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

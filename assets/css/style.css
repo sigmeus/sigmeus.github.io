@@ -65,6 +65,7 @@ body {
 }
 
 body {
+	position: relative;
     font-family: "Lato" sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -72,6 +73,13 @@ body {
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
+
+
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,6 +99,12 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	z-index: 10;
 	text-align: left;
+}
+.menu ul{
+	padding-left: 0px;
+}
+.menu li{
+	list-style-type: none;
 }
 
 .menu.menu-open {
@@ -167,20 +181,20 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 40px;
 	top: 20px;
 	right: 5px;
-	-webkit-transition: all .1s ease-in-out;
-	   -moz-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		 -o-transition: all .1s ease-in-out;
-			transition: all .1s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
 }
 
 .menu-close:hover {
 	color: #ffffff;
-	-webkit-transition: all .1s ease-in-out;
-	   -moz-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		 -o-transition: all .1s ease-in-out;
-			transition: all .1s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
 }
 
 /* Push the body after clicking the menu button */
@@ -192,19 +206,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .body-push-toright {
 	left: 200px;
+
 }
 
 .body-push-toleft {
 	left: -200px;
 }
 
-.menu,
-.body-push {
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-		-ms-transition: all .3s ease;
-		 -o-transition: all .3s ease;
-			transition: all .3s ease;
+.menu, .body-push {
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		 -o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
 }
 
 #menuToggle {
