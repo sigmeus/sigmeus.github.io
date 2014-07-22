@@ -11,8 +11,7 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-lg-6 well" id='messagesDiv' style="height:1200px;"></div>
-      <textarea class="col-lg-6" id='messageInput' placeholder='Message' style="height:1200px;"></textarea>
+      <textarea class="col-lg-12" id='messageInput' placeholder='Message' style="height:1200px;"></textarea>
     </div>
     <script>
       var myDataRef = new Firebase('https://firewrite.firebaseio.com/test');
@@ -20,15 +19,6 @@
           var text = $('#messageInput').val();
           myDataRef.update({text: text});
       });
-      myDataRef.on('child_changed', function(snapshot) {
-        var message = snapshot.val();
-        console.log(message);
-        displayChatMessage(message);
-      });
-      function displayChatMessage(text) {
-        $('#messagesDiv').html(text.replace(/\n/g,"<br/>"));
-        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-      };
     </script>
   </body>
 </html>
